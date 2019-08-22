@@ -23,7 +23,8 @@
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true,HelpMessage = "Enter either all-meat or meat-and-filler.")]
 			[ValidateSet ("all-meat","meat-and-filler")]
 			[String]
-			$MeatOption = "all-meat"
+			#$MeatOption = "all-meat"
+			$MeatOption = $env:MeatOption
 			,
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true,HelpMessage = "Enter number of paragraphs (default=5).")]
 			[ValidateRange (1, 99)]
