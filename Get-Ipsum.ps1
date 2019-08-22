@@ -77,7 +77,8 @@
 	write-debug " Testing response status from site"
 	
 	try {
-		$response = Invoke-WebRequest $baseUri -method GET
+		#$response = Invoke-WebRequest $baseUri -method GET
+		$response = wget $baseUri -method GET
 		if (!($response.StatusDescription -eq "OK"))
 			{
 				write-host "Site is not resopnding to request. Please investigate..."
