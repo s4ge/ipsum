@@ -94,6 +94,7 @@
 	
 	catch {
 		write-host "Cannot obtain response from URI"
+		$error.count
 		Exit
 	} # End Catch
 	
