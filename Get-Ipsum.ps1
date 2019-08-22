@@ -95,6 +95,7 @@
 	catch {
 		write-host "Cannot obtain response from URI"
 		$error.count
+		Write-Host $_.Exception.Message
 		Exit
 	} # End Catch
 	
