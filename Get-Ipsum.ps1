@@ -77,7 +77,7 @@
 	write-debug " Testing response status from site"
 	
 	try {
-		$response = Invoke-WebRequest $baseUri -method GET -ErrorAction Stop
+		$response = Invoke-WebRequest $baseUri -method GET -UseBasicParsing -ErrorAction Stop
 		if (!($response.StatusDescription -eq "OK"))
 			{
 				write-host "Site is not resopnding to request. Please investigate..."
