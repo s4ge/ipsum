@@ -29,22 +29,26 @@
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true,HelpMessage = "Enter number of paragraphs (default=5).")]
 			[ValidateRange (1, 99)]
 			[Int]
-			$ParaTotal = "5"
+			#$ParaTotal = "5"
+			$ParaTotal = $env:ParaTotal
 			,
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true, HelpMessage = "Enter number of sentences. Enter 0 to prevent override of paragraphs")]
 			[ValidateRange (0, 999)]
 			[Int]
-			$SentTotal = $NULL
+			#$SentTotal = $NULL
+			$SentTotal = $env:SentTotal
 			,
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true,HelpMessage = "Enter 1 to start 1st paragraph with Bacon ipsum dolor sit amet.")]
 			[ValidateRange (0,1)]
 			[Int]
-			$LoremFlag = $NULL
+			#$LoremFlag = $NULL
+			$LoremFlag = $env:LoremFlag
 			,
 			[Parameter(Mandatory=$true,ValueFromPipeline=$true,HelpMessage = "Enter either json, html or text (default=json).")]
 			[ValidateSet ("json","text","html")]
 			[String]
-			$FormatOption = "json"
+			#$FormatOption = "json"
+			$FormatOption = $env:FormatOption
 		)
 					
 			
